@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring: 
+  datasource:
+    url: jdbc:mysql://find-log-database.cihmr5iojzzw.us-east-2.rds.amazonaws.com/findlog
+    username: admin
+    password: FindLogAdmin
+    driverClassName: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: true
+    properties:
+      hibernate: 
+        format_sql: true
