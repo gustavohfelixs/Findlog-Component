@@ -21,7 +21,7 @@ public class SecurityConfig {
         httpSecurity.csrf(csrf -> csrf.disable());
         httpSecurity.formLogin().loginPage("/login")
         .defaultSuccessUrl("/logada", true)
-        .permitAll().and().logout().permitAll();
+        .permitAll().and().logout().permitAll().and();
         httpSecurity.httpBasic();
         
         return httpSecurity.build();

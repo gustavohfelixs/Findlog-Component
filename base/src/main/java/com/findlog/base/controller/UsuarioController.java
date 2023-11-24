@@ -1,4 +1,4 @@
-/* package com.findlog.base.controller;
+package com.findlog.base.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -15,15 +15,17 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequiredArgsConstructor
 public class UsuarioController {
-    
+
     private final UsuarioRepository repository;
     private final PasswordEncoder passwordEncoder;
-    
-    @PostMapping("/register")
-    public ResponseEntity<String> findUser(@RequestBody Usuario user) {
-        
-        if(!repository.findByEmail(user.getEmail()).isEmpty()) return ResponseEntity.badRequest().build();
 
+    @PostMapping("/regisster")
+    public ResponseEntity<String> findUser(@RequestBody Usuario user) {
+
+        if (!repository.findByEmail(user.getEmail()).isEmpty())
+            return ResponseEntity.badRequest().build();
+
+        user.setRole("ADMIN");
         var encondedPassword = passwordEncoder.encode(user.getSenha());
 
         user.setSenha(encondedPassword);
@@ -32,6 +34,5 @@ public class UsuarioController {
 
         return ResponseEntity.ok().build();
     }
-    
+
 }
- */

@@ -1,7 +1,10 @@
 <header>
     <div class="menu-content">
         <img src="assets/imagens/findlogoriginal.png" title="FindLog" class="logo" />
-        <nav class="header-menu">
+        <div class="mobile-menu-icon" id="mobileMenuIcon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="header-menu" id="headerMenu">
             <ul class="list-itens">
                 <li><a href="home">home</a></li>
                 <li><a href="servico">serviços</a></li>
@@ -14,3 +17,5 @@
         </nav>
     </div>
 </header>
+
+<script th:src="@{/assets/js/menu.js}"></script>

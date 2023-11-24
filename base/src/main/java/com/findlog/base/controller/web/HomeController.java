@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 @Controller
 public class HomeController {
  
+    @RequestMapping("/")
+    public String redirectToHome() {
+        return "redirect:/home";
+    }
 
     @RequestMapping("/home")
     public String login() {

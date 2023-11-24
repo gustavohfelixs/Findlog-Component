@@ -351,3 +351,120 @@ p {
     margin-top: 20px; /* Espaço acima da imagem */
     max-width: 60%; /* Garante que a imagem não ultrapasse a largura da caixa */
 }
+
+
+/* HEADER */
+/* Seus estilos padrão aqui */
+
+/* Seus estilos existentes aqui */
+
+header {
+    width: 100%;
+    height: 7vh;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Adicione algum espaço nas laterais para melhorar a aparência */
+}
+
+.logo {
+    width: 18%;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.mobile-menu-icon {
+    display: none; /* Por padrão, o ícone do menu não será exibido */
+    cursor: pointer;
+}
+
+.mobile-menu-icon i {
+    font-size: 24px;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+}
+
+.list-itens {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.list-itens a {
+    text-decoration: none;
+    color: black;
+    padding: 1.5rem;
+    transform: 2ms ease-in;
+    position: relative;
+}
+
+.list-itens a:before {
+    content: ' ';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 1px;
+    background-color: blue;
+    transition: all 1.5s ease;
+}
+
+.list-itens a:hover:before {
+    width: 100%;
+}
+
+.password-text {
+    font-size: 10px;
+}
+#mensage{
+    position: absolute;
+    font-size: 15px;
+    display: none;
+}
+ 
+::placeholder{
+    font-size: 15px;
+ 
+}
+/* Adicione uma media query para dispositivos com largura menor que 767 pixels (por exemplo, celulares) */
+@media only screen and (max-width: 767px) {
+    .logo {
+        width: 30%; /* Ajuste o tamanho da logo para dispositivos móveis */
+    }
+
+    .mobile-menu-icon {
+        display: block; /* Exibir o ícone do menu para telas pequenas */
+    }
+
+    .header-menu {
+        display: none; /* Ocultar o menu por padrão em telas pequenas */
+        flex-direction: column; /* Empilhar os itens verticalmente */
+        position: absolute;
+        top: 7vh; /* Ajuste para coincidir com a altura do cabeçalho */
+        left: 0;
+        width: 100%;
+        background-color: aliceblue;
+        z-index: 1;
+    }
+
+    .header-menu.active {
+        display: flex; /* Exibir o menu ao ativar a classe 'active' */
+    }
+
+    .list-itens {
+        flex-direction: column; /* Empilhar os itens verticalmente */
+    }
+
+    .list-itens a {
+        padding: 1rem; /* Ajuste do espaçamento para melhor visualização em telas pequenas */
+    }
+}

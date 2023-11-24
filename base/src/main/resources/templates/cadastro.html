@@ -16,24 +16,56 @@
 
     <div class="caixa">
         <h2>Cadastro de Usuário</h2>
-        <form action="respostaForm" method="post">
+        <form method="post" th:action="@{/register}" th:object="${usuario}">
             <label for="nome_completo">Nome Completo:</label>
             <input type="text" id="nome" name="nome" required>
-
+ 
             <label for="celular">Celular:</label>
             <input type="text" id="celular" name="celular" required placeholder="(XX) XXXXX-XXXX">
-
+ 
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" required placeholder="seuemail@dominio.com">
-
+ 
             <label for="senha">Senha:</label>
             <input type="password" id="senha" name="senha" required>
-
-            <label><input type="checkbox" class="chk">Deseja receber novidades por email?</label>
-
+            <p id="mensage">Senha é <span id="forca"></span></p>
+            <div>
+                <label><input type="checkbox" class="chk">Deseja receber novidades por email?</label>
+            </div>
+ 
             <input type="submit" value="Cadastrar">
         </form>
     </div>
+    <script>
+ 
+        var pass = document.getElementById("senha");
+        var msg = document.getElementById("mensage");
+        var str = document.getElementById("forca");
+ 
+        pass.addEventListener('input',() => {
+            if(pass.value.length >0){
+                msg.style.display = "block";
+            }
+            else{
+                msg.style.display = "none";
+            }
+            if(pass.value.length <4){
+                str.innerHTML = "fraca <br> <ul> <li  class = 'password-text'>Senha maior de 8 caracteres</li><li  class = 'password-text'>Use caracteres especiais (@, $, #)</li></ul>";
+                pass.style.borderColor="red"
+                msg.style.color = "#red"
+            }
+            else if(pass.value.length >=4 && pass.value.length< 8){
+                str.innerHTML = "media <br> <ul> <li  class = 'password-text'>Senha maior de 8 caracteres</li><li  class = 'password-text'>Use caracteres especiais (@, $, #)</li></ul>";
+                pass.style.borderColor="orange"
+                msg.style.color = "orange"
+            }
+            else if(pass.value.length >=8){
+                str.innerHTML = "forte";
+                pass.style.borderColor="#26d730"
+                msg.style.color = "#26d730"
+            }
+        })
+    </script>
 
 </body>
 
