@@ -1,4 +1,4 @@
-package com.findlog.base.controller;
+/* package com.findlog.base.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -34,3 +34,4 @@ public class UsuarioController {
     }
     
 }
+ */

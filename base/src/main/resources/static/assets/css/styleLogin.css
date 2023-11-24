@@ -1,0 +1,153 @@
+html {
+    width: 100vw;
+    height: 100vh;
+    font-size: 68.5%;
+    color: black;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background: linear-gradient(deepskyblue, rgba(50, 111, 218)), url(/assets/imagens/logistica.png);
+    background-position: center center;
+    background-size: cover;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+    padding-bottom: 40%;
+}
+
+
+header {
+    width: 100%;
+    height: 7vh;
+    background-color:  aliceblue;
+}
+
+.logo{
+    width: 18%;
+}
+
+.menu-content {
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+
+
+.menu-content .list-itens {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.menu-content .list-itens a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    padding: 1.5rem;
+    transform: 2ms ease-in;
+    position: relative;
+}
+
+.menu-content .list-itens a:before {
+    content: ' ';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 1px;
+    background-color: rgb(251, 255, 0);
+    transition: all 1.5s ease; 
+}
+
+.menu-content .list-itens a:hover:before {
+    width: 100%;
+}
+
+
+
+/*cadastro*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: blue;
+    padding: 20%;
+}
+
+.caixa {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: blue;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    
+}
+
+input[type="submit"]:hover {
+    background-color: blue;
+}
+
+.mensagem{
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.chk{
+    margin: 30px 6px  ;
+}
+
+
+
+/*Estilizacao do footer*/
+
+footer{
+    text-align: center;
+    /*background: url("assets/imagens/findlogoriginal.png");*/
+    padding: 40px;
+    background-color: aliceblue;
+}
+.copyright{
+    color:black;
+    font-size: 12px;
+    margin: 20px;
+}
+.logo_footer{
+    width: 15%;
+}   

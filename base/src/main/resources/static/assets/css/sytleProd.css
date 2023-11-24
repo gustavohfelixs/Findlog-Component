@@ -1,0 +1,107 @@
+/* Estilos gerais */
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Menu - Header - NavBar */
+header {
+    background-color: aliceblue;
+}
+
+.logo {
+    width: 18%;
+}
+
+.menu-content {
+    height: 7vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.menu-content .list-itens {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.menu-content .list-itens a {
+    text-decoration: none;
+    color: black;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.menu-content .list-itens a:before {
+    content: ' ';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 1px;
+    background-color: blue;
+    transition: all 1.5s ease;
+}
+
+.menu-content .list-itens a:hover:before {
+    width: 100%;
+}
+
+/* Produtos */
+.produtos {
+    background-color: deepskyblue;
+    text-align: center;
+}
+
+.titulo_produtos {
+    color: #FFFFFE;
+    padding-top: 3%;
+}
+
+/* Tecnologia na Logística */
+.logis {
+    background-color: aliceblue;
+    text-align: center;
+}
+
+.titulo_tec {
+    padding-top: 3%;
+}
+
+.logistica {
+    width: 25%;
+    height: 25%;
+    padding-left: 37%;
+}
+
+.box {
+    text-align: center;
+}
+
+/* Footer */
+.mainFooter {
+    text-align: center;
+}
+
+.logo_footer {
+    width: 10%;
+}
+
+.copyright {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* Imagens dos Planos */
+.imagens-planos {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.imagens-planos img {
+    width: 30%; /* Ajuste conforme necessário */
+    margin: 0 10px; /* Espaçamento entre as imagens */
+}

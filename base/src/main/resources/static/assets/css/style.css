@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    padding-bottom: 0%;
+}
+
+body {
+    background: linear-gradient(deepskyblue, rgba(50, 111, 218)), url(/assets/imagens/logistica.png);
+    background-position: center center;
+    background-size: cover;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+    padding-bottom: 0%;
+}
+
+header {
+    width: 100%;
+    height: 7vh;
+    background-color: aliceblue;
+}
+
+.logo {
+    width: 18%;
+}
+
+.menu-content {
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.menu-content .list-itens {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.menu-content .list-itens a {
+    text-decoration: none;
+    color: black;
+    padding: 1.5rem;
+    transform: 2ms ease-in;
+    position: relative;
+}
+
+.menu-content .list-itens a:before {
+    content: ' ';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 1px;
+    background-color: blue;
+    transition: all 1.5s ease;
+}
+
+.menu-content .list-itens a:hover:before {
+    width: 100%;
+}
+
+main {
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.primary-text {
+    max-width: 850px;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.second-text {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: rgb(165, 165, 165);
+    text-transform: uppercase;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btns button {
+    width: 250px;
+    height: 60px;
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    border-radius: 20px;
+    position: relative;
+    transition: 1.5s;
+}
+
+.btns button:hover {
+    color: aliceblue;
+    border: none;
+}
+
+.btns button:before {
+    content: ' ';
+    border-radius: 20px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 60px;
+    background-color: rgb(61, 61, 61);
+    z-index: -1;
+    transition: 1s;
+}
+
+.btns button:hover:before {
+    width: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: blue;
+}
+
+.caixa {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+}
+
+.login-pop {
+    background-color: red; 
+    color: white; 
+    padding: 10px; 
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="button"],
+input[type="submit"] {
+    background-color: blue;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background-color: royalblue;
+}
+
+.mensagem {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.chk {
+    margin: 30px 6px;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+}
+
+.p1,
+.p2 {
+    font-size: 1.8em;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 1.5;
+}
+
+.principal {
+    margin-top: 0%;
+    padding-top: 0%;
+    background-color: deepskyblue;
+}
+
+.produtos {
+    margin-top: 0%;
+    padding-top: 0%;
+    background-color: deepskyblue;
+}
+
+.conteudo_produtos {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.titulo_produtos {
+    text-align: center;
+    color: #FFFFFE;
+    margin: 0;
+    padding-top: 3%;
+    font-size: 5.0rem;
+}
+
+.paragrafo {
+    padding: 80px;
+    text-align: center;
+}
+
+.conteudo_produtos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img_basic,
+.img_starter,
+.img_pro {
+    width: 18%;
+    transition: transform .5s ease;
+}
+
+.img_basic,
+.img_starter {
+    margin-right: 2%;
+}
+
+.img_pro {
+    margin-right: 0;
+}
+
+.img_basic:hover,
+.img_starter:hover,
+.img_pro:hover {
+    transform: scale(1.1);
+}
+
+.logis {
+    background-color: aliceblue;
+}
+
+.logistica {
+    width: 70%;
+    max-width: 300px;
+    margin-top: 20px;
+    display: block;
+    margin: auto;
+}
+
+.main-contentt {
+    max-width: 800px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+}
+
+.primary-text, .second-text {
+    color: #333;
+}
+
+.texto-box {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+.titulo_tec {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.logis {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+.grafico {
+    display: block;
+    margin: auto;
+    margin-top: 20px; /* Espaço acima da imagem */
+    max-width: 60%; /* Garante que a imagem não ultrapasse a largura da caixa */
+}

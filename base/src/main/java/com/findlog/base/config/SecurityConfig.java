@@ -17,10 +17,11 @@ public class SecurityConfig {
  
     @Bean
     public SecurityFilterChain securityFilterChain (HttpSecurity httpSecurity) throws Exception {
-        httpSecurity.authorizeHttpRequests((requests) -> requests.requestMatchers("/register").permitAll()
-        .requestMatchers("/contact").authenticated());
+        httpSecurity.authorizeHttpRequests((requests) -> requests.anyRequest().permitAll());
         httpSecurity.csrf(csrf -> csrf.disable());
-        httpSecurity.formLogin();
+        httpSecurity.formLogin().loginPage("/login")
+        .defaultSuccessUrl("/logada", true)
+        .permitAll().and().logout().permitAll();
         httpSecurity.httpBasic();
         
         return httpSecurity.build();

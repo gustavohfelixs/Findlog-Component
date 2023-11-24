@@ -36,6 +36,7 @@ public class AuthenticationProviderService implements AuthenticationProvider {
                 if (encoder.matches(senha, customer.getSenha())) {
                     List<GrantedAuthority> authorities = new ArrayList<>();
                     authorities.add(new SimpleGrantedAuthority(customer.getRole()));
+                    System.out.println("USUARIO AUTENTICADO!!");
                     return new UsernamePasswordAuthenticationToken(email, senha, authorities);
                 } else {
                     throw new BadCredentialsException("Invalid Password for user");
